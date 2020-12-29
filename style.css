@@ -274,6 +274,14 @@ button {outline: none;}
         max-width: 720px;
     }
 }
+@media(max-width:768px) {
+    .section-2 {
+        height: 200vh;
+    }
+    .section-3 {
+        height: 200vh;
+    }
+}
 @media(min-width: 992px) {
     .container {
         max-width: 960px;
@@ -305,6 +313,14 @@ button {outline: none;}
     .col-md-8 {
         flex: 0 0 66.66667%;
         max-width: 66.66667%;
+    }
+}
+@media(max-width: 992px) {
+    .section-2 {
+        height: 200vh;
+    }
+    .section-3 {
+        height: 200vh;
     }
 }
 
@@ -348,10 +364,10 @@ button {outline: none;}
         color: #ad9c9b;
     }
     .section-2 {
-        height: 300vh;
+        height: 250vh;
     }
     .section-3 {
-        height: 200vh;
+        height: 250vh;
     }
 }
 
