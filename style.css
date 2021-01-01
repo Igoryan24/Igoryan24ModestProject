@@ -25,7 +25,9 @@ body {
     padding-left: -15px;
     padding-right: -15px;
 }
-.header {
+/*HEADER*/
+
+/*.header {
     position: sticky;
     top: 0;
     background-color: #1d2126;
@@ -42,9 +44,9 @@ body {
     text-align: center;
     align-items: center;
     margin-top: 30px;
-    /*margin-left: -30px;*/
 }
 .menu li {
+    align-self: center;
     width: 85px;
 }
 .menu a {
@@ -60,23 +62,23 @@ body {
 }
 .form {
     display: flex;
+    position: relative;
     margin-top: 25px;
     margin-bottom: 25px;
+    width: 195px;
+    height: 30px;
     flex-direction: row;
     justify-content: flex-start;
 }
 .search {
-    position: relative;
-    width: 195px;
-    height: 30px;
-    color: #ad9c9b;
+    color: #a4aead;
     font-size: 15px;
-    border: 1px solid #ad9c9b;
+    border: 1px solid #a4aead;
     background: none;
     padding-left: 10px;
 }
 .search:focus {outline: none;}
-.search::-webkit-input-placeholder { color: #ad9c9b; }
+.search::-webkit-input-placeholder { color: #a4aead; }
 .button-search {
     position: absolute;
     height: 20px;
@@ -89,12 +91,12 @@ body {
 .button-search:before {
     content: "\f002";
     font-family: FontAwesome;
-    color: #ad9c9b;
+    color: #a4aead;
     font-size: 15px;
-}
+}*/
 /*section-1*/
 
-.section-1 {
+/*.section-1 {
     background-image: url(images/background-photo.png);
     background-size: cover;
 }
@@ -120,7 +122,7 @@ body {
 /*.descri-ption-1 {
     margin-top: 35px;
 }*/
-.buttons {
+/*.buttons {
     align-items: left;
     margin-top: 40px;
     margin-bottom: 250px;
@@ -142,7 +144,7 @@ button {outline: none;}
 
 /*section-2*/
 
-.page-heading {
+/*.page-heading {
     margin-top: 80px;
     border-left: 10px solid #d0d5d9;
     padding-left: 15px;
@@ -209,7 +211,7 @@ button {outline: none;}
 
 /*section 3*/
 
-[class*="team-"] {
+/*[class*="team-"] {
     height: 300px;
     display: flex;
     flex-direction: row;
@@ -271,24 +273,26 @@ button {outline: none;}
 .block-team:hover .person-description {
     background-color: #3a454d;
     color: white;
-}
+}*/
 
 /*SECTION 4*/
-.section-4 {
+/*.section-4 {
     background-color: #3a454d;
 }
 .dark-bg .heading-4 {
     color: white;
 }
+.lovely-work-container {
+    margin-top: 30px;
+}
+
 .landscapes {
-    margin-top: 60px;
+    margin-top: 30px;
 }
 [class*="photos-"] {
-    height: 265px;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
-    flex-shrink: 0;
+    justify-content: space-between;
 }
 .photos-1 {
     background-image: url(images/lift.png);
@@ -302,30 +306,47 @@ button {outline: none;}
     background-image: url(images/road.png);
     background-size: cover;
 }
+.photos-4 {
+    background-image: url(images/seascape.png);
+    background-size: cover;
+}
+.photos-5 {
+    background-image: url(images/mountains.png);
+    background-size: cover;
+}
+.photos-6 {
+    background-image: url(images/bird.png);
+    background-size: cover;
+}
 .landscapes:hover .image-item {
-    visibility: visible;
-    margin-top: 205px;
-    padding-top: 25px;
-    padding-bottom: 25px;
-    padding-left: 15px;
-    background-color: #292f36;
-    color: white;
+    visibility: visible;    
 }
 .image-item {
     visibility: hidden;
+    margin-top: 70px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    padding-left: 15px;
+    width: 100%;
+    align-self: flex-end;
+    background-color: #292f36;
+    color: white;
 }
-[class*="photos-"]:hover .plus {
-    display: flex;
-    align-self: center;
+.landscapes:hover .plus {
     visibility: visible;
 }
 .plus {
-    /*visibility: hidden;*/
+    margin-top: 70px;
+    visibility: hidden;
+    align-self: center;
     background-size: cover;
     background-image: url(images/plus.png);
-    width: 20px;
-    height: 20px;
+    width: 40px;
+    height: 40px;
 }
+.plus:hover {
+    color: #292f36;
+}*/
 @media(min-width:768px) {
     .container {
         max-width: 720px;
@@ -335,6 +356,19 @@ button {outline: none;}
         max-width: 50%;
     }
 }
+/*@media(max-width:768px) {
+    .hide-sm {
+        display: none;
+    }
+    .logo {
+        margin-top: 10px;
+        margin-left: 20px;
+    }
+    .menu ul {
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+}*/
 @media(min-width: 992px) {
     .container {
         max-width: 960px;
@@ -385,6 +419,11 @@ button {outline: none;}
     .hide-xs {
         display: none;
     }
+    .header {
+        position: sticky;
+        top: 0;
+        background-color: #1d2126;
+    }
     .logo {
         margin-top: 15px;
         text-align: center;
@@ -396,8 +435,8 @@ button {outline: none;}
         justify-content:space-between;
         flex-direction: row;
         list-style: none;
-        text-align: center;
-        align-items: center;
+        /*text-align: center;
+        align-items: center;*/
         margin-top: 10px;
         padding-bottom: 10px;
     }
@@ -419,8 +458,264 @@ button {outline: none;}
         border-radius: 5px;
     }
     /*section-1*/
+
+    .section-1 {
+    background-image: url(images/background-photo.png);
+    background-size: cover;
+    }
+
+    [class*="section-"] {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
     [class*="heading-"] {
         font-size: 25px;
+    }
+    .heading-1 {
+        margin-top: 225px;
+        color: #ffff
+    }
+    [class*="descri-"] {
+        color: #8d8f92;
+        font-size: 15px;
+        margin-top: 35px;
+        line-height: 1.5;
+    }
+    .buttons {
+        align-items: left;
+        margin-top: 40px;
+        margin-bottom: 250px;
+    }
+    [class*="btn-"] {
+        width: 125px;
+        height: 45px;
+        border-radius: 10px;
+        background: transparent;
+        border: 2px solid white;
+        color: white;
+        cursor: pointer;
+    }
+    [class*="btn-"]:hover {
+        background-color: #39a493;
+        border: none;
+    }
+    button {outline: none;}
+    
+    /*SECTION - 2*/
+    .page-heading {
+        margin-top: 80px;
+        border-left: 10px solid #d0d5d9;
+        padding-left: 15px;
+        color: black;
+    }
+    .head-item {
+        margin-top: 80px;
+    }
+    .descri-ption-2 {
+        margin-top: 60px;
+    }
+    .text-selection {
+        color: black;
+        font-weight: bold;
+    }
+    .sotial-link {
+        display: flex;
+        flex-direction: row;
+        margin-left: -1px;
+        margin-top: 55px;
+        margin-bottom: 100px;
+    }
+    [class*="square-"] {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 1px;
+        width: 60px;
+        height: 60px;
+        background-color:#d0d5d9;
+        cursor: pointer;
+    }
+    .items {
+        margin-left: 15px;
+        margin-top: -2px;
+    }
+    .item-heading {
+        font-size: 17px;
+        font-weight: bold;
+    }
+    .descri-ption-item {
+        margin-top: 20px;
+    }
+    .items-section {
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: row;
+        flex-shrink: 0;
+        margin-top: 30px;
+    }
+    .square-item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-shrink: 0;
+        width: 60px;
+        height: 60px;
+        color: white;
+        background-color: #36e3c8;
+    }
+    .item-container {
+        margin-top: 65px;
+    }
+    /*SECTION - 3*/
+    
+    [class*="team-"] {
+        height: 300px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-shrink: 0;
+    }
+    .person-block {
+        margin-top: 30px;
+        margin-bottom: 100px;
+    }
+    .block-team {
+        margin-top: 30px;
+    }
+    .team-1 {
+        background-image: url(images/face-1.png);
+        background-size: cover;
+    }
+    .team-2 {
+        background-image: url(images/face-4.png);
+        background-size: cover;
+    }
+    .team-3 {
+        background-image: url(images/face-3.png);
+        background-size: cover;
+    }
+    .team-4 {
+        background-image: url(images/face-2.png);
+        background-size: cover;
+    }
+    
+    .person-description {
+        height: 70px;
+        color: #292f36;
+        background-color: #e1e6ea;
+    }
+    [class*="team-"]:hover .face-link {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        align-self: center;
+    }
+    .face-link {
+        display: none;
+    }
+    .square-link {
+        background-color: #3a454d;
+    }
+    .square-link:hover {
+        background-color: #3a454d;
+    }
+    .name-person {
+        margin-left: 15px;
+        padding-top: 15px;
+        font-size: 14px;
+        font-weight: bold;
+    }
+    .position-person {
+        color: #a3a6a9;
+        margin-left: 15px;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        font-size: 14px;
+    }
+    
+    .block-team:hover .person-description {
+        background-color: #3a454d;
+        color: white;
+    }
+    /*SECTION 4*/
+    .section-4 {
+        background-color: #3a454d;
+    }
+    .dark-bg .heading-4 {
+        color: white;
+    }
+    .lovely-work-container {
+        margin-top: 30px;
+    }
+
+    .landscapes {
+        margin-top: 30px;
+    }
+    [class*="photos-"] {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .photos-1 {
+        background-image: url(images/lift.png);
+        background-size: cover;
+    }
+    .photos-2 {
+        background-image: url(images/board.png);
+        background-size: cover;
+    }
+    .photos-3 {
+        background-image: url(images/road.png);
+        background-size: cover;
+    }
+    .photos-4 {
+        background-image: url(images/seascape.png);
+        background-size: cover;
+    }
+    .photos-5 {
+        background-image: url(images/mountains.png);
+        background-size: cover;
+    }
+    .photos-6 {
+        background-image: url(images/bird.png);
+        background-size: cover;
+    }
+    .landscapes:hover .image-item {
+        visibility: visible;    
+    }
+    .image-item {
+        visibility: hidden;
+        margin-top: 70px;
+        padding: 25px 15px 25px;
+        width: 100%;
+        align-self: flex-end;
+        background-color: #292f36;
+        color: white;
+    }
+    .landscapes:hover .plus {
+        visibility: visible;
+    }
+    .plus {
+        margin-top: 70px;
+        visibility: hidden;
+        align-self: center;
+        background-size: cover;
+        background-image: url(images/plus.png);
+        width: 40px;
+        height: 40px;
+    }
+    .plus:hover {
+        color: #292f36;
+    }
+    .btn-showme-more {
+        display: flex;
+        align-self: center;
+        width: 150px;
+        padding: 15px 24px;
+        font-size: 12px;
+        margin: 60px auto;
     }
 }
 
