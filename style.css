@@ -28,6 +28,7 @@ body {
 [class*="section-"] {
     border-bottom: 1px solid #dde1e4;
 }
+
 @media(min-width:768px) {
     .container {
         max-width: 720px;
@@ -68,43 +69,45 @@ body {
     .menu ul {
         position: sticky;
         display: flex;
-        overflow-x: auto;
-        justify-content:space-between;
+        overflow-x: scroll;
+        justify-content:flex-start;
+        align-self: center;
         list-style: none;
-        margin-top: 10px;
-        padding-bottom: 10px;
-        margin-bottom: 10px;
+        margin-top: 5px;
     }
     .menu ul::-webkit-scrollbar {
         display: none;
     }
     .menu li {
-        padding-top: 10px;
-        padding-left: 30px;
-        width: 85px;
+        border: 1px solid #1d2126;
+        border-radius: 5px;
+        align-items: center;
+        padding: 7px 10px;
+        
     }
     .menu a {
-        font-size: 15px;
+        font-size: 14px;
+        font-weight: bold;
         text-decoration: none;
         color:  #a4aead;
-        padding: 5px 10px 5px 10px;
     }
-    .menu a:hover {
+    .menu li:hover {
         border: 1px solid #a4aead;
         border-radius: 5px;
     }
     .form {
         display: flex;
-        margin-top: 13px;
-        position: relative;
-        align-self: center;
-        width: 195px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        margin-left: 15px;
+        position: sticky;
         height: 30px;
     }
     .search {
         color: #a4aead;
-        font-size: 15px;
+        font-size: 14px;
         border: 1px solid #a4aead;
+        border-radius: 5px;
         background: none;
         padding-left: 10px;
     }
@@ -113,7 +116,6 @@ body {
     .button-search {
         position: absolute;
         height: 20px;
-        width: 25px;
         margin-top: 5px;
         margin-left: 150px;
         background: transparent;
@@ -160,6 +162,9 @@ body {
         color: white;
         cursor: pointer;
     }
+    .btn-more-video {
+        margin-left: 10px;
+    }
     [class*="btn-"]:hover {
         background-color: #39a493;
         border: none;
@@ -195,9 +200,10 @@ body {
         display: flex;
         justify-content: center;
         align-items: center;
+        flex-shrink: 0;
         margin-left: 1px;
-        width: 50px;
-        height: 50px;
+        width: 60px;
+        height: 60px;
         background-color:#d0d5d9;
         cursor: pointer;
     }
@@ -226,6 +232,7 @@ body {
         flex-shrink: 0;
         width: 60px;
         height: 60px;
+        font-size: 20px;
         color: white;
         background-color: #36e3c8;
     }
@@ -377,9 +384,9 @@ body {
     }
     .btn-showme-more {
         display: flex;
-        align-self: center;
+        justify-content: center;
+        align-items: center;
         width: 150px;
-        padding: 15px 24px;
         font-size: 12px;
         margin: 60px auto;
     }
@@ -443,12 +450,16 @@ body {
     }
     /*SECTION-8*/
     .section-8 .item-heading {
-        font-size: 20px;
+        font-size: 18px;
         margin-left: 10px;
         margin-top: 60px;
     }
     .contacts {
         margin-bottom: 130px;
+    }
+    .footer {
+        display: flex;
+        flex-direction: row;
     }
     .footer .sotial {
         margin-top: 20px;
@@ -461,10 +472,6 @@ body {
     .container {
         max-width: 960px;
     }
-    /*.col-md-1 {
-        flex: 0 0 8.33333%;
-        max-width: 8.33333%;
-    }*/
     .col-md-2 {
         flex: 0 0 16.66667%;
         max-width: 16.66667%;
@@ -493,6 +500,109 @@ body {
         flex: 0 0 66.66667%;
         max-width: 66.66667%;
     }
+    .col-md-12 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    /*HEADER*/
+    .header {
+        display: flex;
+        justify-content: space-between;
+        position: sticky;
+        top: 0;
+        background-color: #1d2126;
+    }
+    .logo {
+        text-align: left;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    .menu ul {
+        position: sticky;
+        display: flex;
+        justify-content:flex-start;
+        list-style: none;
+        margin-top: 25px;
+        margin-left: 30px;
+    }
+    .menu li {
+        border: 1px solid #1d2126;
+        border-radius: 5px;
+        align-items: center;
+        padding: 7px 10px;
+        
+    }
+    .menu a {
+        align-items: center;
+        font-size: 14px;
+        font-weight: bold;
+        text-decoration: none;
+        color:  #a4aead;
+    }
+    .menu li:hover {
+        border: 1px solid #a4aead;
+        border-radius: 5px;
+    }
+    .form {
+        margin-left: -15px;
+        display: flex;
+        margin-top: 25px;
+        position: relative;
+        height: 30px;
+    }
+    .search {
+        color: #a4aead;
+        font-size: 14px;
+        border: 1px solid #a4aead;
+        border-radius: 5px;
+        background: none;
+        padding-left: 10px;
+    }
+    .search:focus {outline: none;}
+    .search::-webkit-input-placeholder { color: #a4aead; }
+    .button-search {
+        position: absolute;
+        margin-top: 5px;
+        margin-left: 150px;
+        background: transparent;
+        border: none;
+    }
+    .button-search:before {
+        content: "\f002";
+        font-family: FontAwesome;
+        color: #a4aead;
+        font-size: 15px;
+    }
+    [class*="descri-"] {
+        color: #8d8f92;
+        font-size: 15px;
+        margin-top: 35px;
+        line-height: 1.5;
+        text-align: left;
+    }
+    .item-container {
+        margin-top: 10px;
+    }
+    .sotial-link {
+        margin-top: -35px;
+    }
+    .descri-ption-item {
+        margin-top: 20px;
+    }
+    [class*="heading-"] {
+        font-size: 30px;
+        /*font-weight: bold;*/
+    }
+    .footer {
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: row;
+    }
+    .sotial {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    
 }
 
 @media(min-width: 1200px) {
@@ -508,7 +618,7 @@ body {
         display: none;
     }
     .header {
-        /*display: flex;*/
+        display: flex;
         position: sticky;
         top: 0;
         background-color: #1d2126;
@@ -521,8 +631,7 @@ body {
         position: sticky;
         display: flex;
         overflow-x: auto;
-        /*justify-content:space-between;*/
-        /*width: 100%;*/
+        justify-content:space-between;
         list-style: none;
         margin-top: 10px;
         padding-bottom: 20px;
@@ -532,14 +641,13 @@ body {
     }
     .menu li {
         padding-top: 10px;
-        padding-left: 30px;
-        width: 85px
     }
     .menu a {
         font-size: 15px;
         text-decoration: none;
         color:  #a4aead;
-        padding: 5px 10px 5px 10px;
+        padding: 7px 10px;
+        border: 1px solid #1d2126;
     }
     .menu a:hover {
         border: 1px solid #a4aead;
@@ -551,12 +659,6 @@ body {
     background-image: url(images/background-photo.png);
     background-size: cover;
     }
-
-    /*[class*="section-"] {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }*/
 
     [class*="heading-"] {
         font-size: 25px;
@@ -579,6 +681,7 @@ body {
     [class*="btn-"] {
         width: 125px;
         height: 45px;
+        font-size: 13px;
         border-radius: 10px;
         background: transparent;
         border: 2px solid white;
@@ -589,6 +692,7 @@ body {
         background-color: #39a493;
         border: none;
     }
+
     button {outline: none;}
     
     /*SECTION - 2*/
@@ -646,12 +750,12 @@ body {
     }
     .square-item {
         display: flex;
-        justify-content: center;
         align-items: center;
         flex-shrink: 0;
         width: 60px;
         height: 60px;
         color: white;
+        font-size: 20px;
         background-color: #36e3c8;
     }
     .item-container {
@@ -798,13 +902,13 @@ body {
         height: 40px;
     }
     .plus:hover {
-        color: #292f36;
+        background-color: #292f36;
     }
     .btn-showme-more {
         display: flex;
-        align-self: center;
+        justify-content: center;
+        align-items: center;
         width: 150px;
-        padding: 15px 24px;
         font-size: 12px;
         margin: 60px auto;
     }
