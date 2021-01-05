@@ -459,11 +459,16 @@ body {
     }
     .footer {
         display: flex;
-        flex-direction: row;
     }
-    .footer .sotial {
+    .sotial {
+        display: flex;
+        justify-content: center;
         margin-top: 20px;
         margin-bottom: 20px;
+    }
+    .footer-link {
+        width: 30px;
+        height: 30px;
     }
     
 }
@@ -595,12 +600,16 @@ body {
     }
     .footer {
         display: flex;
-        justify-content: flex-start;
-        flex-direction: row;
     }
     .sotial {
+        display: flex;
+        justify-content: flex-end;
         margin-top: 20px;
         margin-bottom: 20px;
+    }
+    .footer-link {
+        width: 30px;
+        height: 30px;
     }
     
 }
@@ -979,10 +988,18 @@ body {
     .contacts {
         margin-bottom: 130px;
     }
-    .footer .sotial {
-        text-align: center;
+    .footer {
+        display: flex;
+    }
+    .sotial {
+        display: flex;
+        justify-content: center;
         margin-top: 20px;
         margin-bottom: 20px;
+    }
+    .footer-link {
+        width: 30px;
+        height: 30px;
     }
 }
 
