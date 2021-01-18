@@ -14,12 +14,12 @@
 <body>
     <header class="header"> <!--HEADER-->
         <div class="container">
-            <div class="row">
-                <div class="col-xs-12 col-sm-2 col-md-2 logo">
+            <div class="row header-row">
+                <div class="col-sm-2 col-md-2 logo">
                     <img src="images/modest.png" alt="">
                 </div>
-                <div class="col-xs-12 col-sm-6 col-md-8 menu">
-                    <ul>
+                <div class="col-sm-6 col-md-8">
+                    <ul class="menu navigation hidden-menu">
                         <li><a href="">HOME</a></li>
                         <li><a href="">ABOUT</a></li>
                         <li><a href="">WORK</a></li>
@@ -28,6 +28,11 @@
                         <li><a href="">FEATURES</a></li>
                         <li><a href="">CONTACT</a></li>
                     </ul>
+                    <div class="nav-mobile-menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
                 </div>
                 <div class="col-xs-12 hide-xs col-sm-2 col-md-2">
                     <form class="form" action="">
@@ -407,6 +412,33 @@
                         <p class="descri-ption">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nisi metus, tristique nec dolor non, ornare sagittis dolor. Nulla vestibulum lacus sed molestie gravida.</p>
                         <p class="descri-ption">Cras fermentum elit quis magna congue, <span class="text-selection">vel sodales </span>arcu vestibulum. Nunc lobortis dui magna, quis dapibus lacus</p>
                     </div>
+                    <div class="col-xs-12 col-sm-6 col-md-6">
+                        <div class="form-block">
+                            <form action="">
+                                <div class="closed">x</div>
+                                <div class="form-inputs">
+                                    <div class="name">
+                                        <p class="descri-ption-input">YOUR NAME</p>
+                                        <input class="field-input" type="text">
+                                    </div>
+                                    <div class="email">
+                                        <p class="descri-ption-input">YOUR EMAIL</p>
+                                        <input class="field-input" type="text">
+                                    </div>
+                                </div>
+                                <div class="message">
+                                    <p class="descri-ption-input">YOUR EMAIL</p>
+                                    <textarea class="message-field" name="" id="" cols="30" rows="10"></textarea>
+                                </div>
+                                <button class="btn-send-message">SEND MESSAGE</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6 col-md-6">
+                        <button class="btn-show-form">SHOW FORM</button>
+                    </div>
                 </div>
             </div>
         </section>
@@ -426,5 +458,17 @@
             </div>
         </div>
     </footer>
+    <div class="modal">
+        <div class="modal-block">
+            <form action="">
+                <div class="close-btn">x</div>
+                <h3 class="modal-heading">PLEASE CALL FOR MORE DETAILS</h3>
+                <div class="form-fields"><input class="input-field" type="text" placeholder="Your name"></div>
+                <div class="form-fields"><input class="input-field" type="text" placeholder="Your phone"></div>
+                <button class="btn-modal">PLEASE CALL</button>
+            </form>
+        </div>
+    </div>
+    <script src="app.js"></script>
 </body>
 </html>

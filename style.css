@@ -61,12 +61,13 @@ body {
         position: sticky;
         top: 0;
         background-color: #1d2126;
+        z-index: 15;
     }
     .logo {
         text-align: left;
         align-self: center;
     }
-    .menu ul {
+    .menu {
         position: sticky;
         display: flex;
         overflow-x: scroll;
@@ -75,7 +76,7 @@ body {
         list-style: none;
         margin-top: 5px;
     }
-    .menu ul::-webkit-scrollbar {
+    .menu::-webkit-scrollbar {
         display: none;
     }
     .menu li {
@@ -455,7 +456,10 @@ body {
         margin-top: 60px;
     }
     .contacts {
-        margin-bottom: 130px;
+        margin-bottom: 50px;
+    }
+    .section-map {
+        z-index: 10;
     }
     .footer {
         display: flex;
@@ -469,6 +473,70 @@ body {
     .footer-link {
         width: 30px;
         height: 30px;
+    }
+    /*FORM*/
+    .closed {
+        width: 25px;
+        height: 25px;
+        background-color: red;
+        color: #ffff;
+        right: 0;
+        text-align: center;
+        position: absolute;
+        border-radius: 5px;
+        padding-top: 3px;
+    }
+    .form-block {
+        margin-top: -450px;
+        margin-left: 100px;
+        display: flex;
+        display: none;
+        position: relative;
+        background-color: #ffff;
+        width: 475px;
+    }
+    .form-inputs {
+        display: flex;
+        flex-direction: row;
+        margin-left: 30px;
+    }
+    .field-input, .message-field {
+        margin-top: 10px;
+        background-color: #eaeef1;
+        border: none;
+    }
+    .field-input {
+        margin-top: 10px;
+        width: 200px;
+        height: 45px;
+    }
+    .email {
+        margin-left: 15px;
+    }
+    .descri-ption-input {
+        margin-left: 5px;
+    }
+    .message {
+        margin-left: 30px;
+    }
+    .message-field {
+        margin-top: 10px;
+        width: 415px;
+        height: 160px;
+        resize: none;
+    }
+    .btn-send-message, .btn-show-form {
+        background-color: #a4aead;
+        border: none;
+    }
+    .btn-send-message {
+        color: white;
+        margin-left: 30px;
+        margin-top: 30px;
+        width: 150px;
+    }
+    .btn-show-form {
+        margin-bottom: 80px;
     }
     
 }
@@ -516,13 +584,14 @@ body {
         position: sticky;
         top: 0;
         background-color: #1d2126;
+        z-index: 15;
     }
     .logo {
         text-align: left;
         margin-top: 30px;
         margin-bottom: 30px;
     }
-    .menu ul {
+    .menu {
         position: sticky;
         display: flex;
         justify-content:flex-start;
@@ -611,12 +680,138 @@ body {
         width: 30px;
         height: 30px;
     }
-    
+    /*FORM*/
+
+    .closed {
+        width: 25px;
+        height: 25px;
+        margin-top: 5px;
+        background-color: red;
+        color: #ffff;
+        position: absolute;
+        right: 0;
+        margin-right: 30px;
+        text-align: center;
+        padding-top: 4px;
+    }
+    .form-block {
+        display: flex;
+        margin-top: -250px;
+        display: none;
+        position: relative;
+        background-color: #ffff;
+        width: 475px;
+    }
+    .form-inputs {
+        display: flex;
+        flex-direction: row;
+        margin-left: 30px;
+    }
+    .field-input, .message-field {
+        margin-top: 10px;
+        background-color: #eaeef1;
+        border: none;
+    }
+    .field-input {
+        margin-top: 10px;
+        width: 200px;
+        height: 45px;
+    }
+    .email {
+        margin-left: 15px;
+    }
+    .descri-ption-input {
+        margin-left: 5px;
+    }
+    .message {
+        margin-left: 30px;
+    }
+    .message-field {
+        margin-top: 10px;
+        width: 415px;
+        height: 160px;
+        resize: none;
+    }
+    .btn-send-message, .btn-show-form {
+        background-color: #a4aead;
+        border: none;
+    }
+    .btn-send-message {
+        color: white;
+        margin-left: 30px;
+        margin-top: 30px;
+        width: 150px;
+    }
+    .btn-show-form {
+        margin-bottom: 80px;
+    }
 }
 
 @media(min-width: 1200px) {
     .container {
         max-width: 1140px;
+    }
+    /*FORM*/
+
+    .closed {
+        width: 25px;
+        height: 25px;
+        background-color: red;
+        color: #ffff;
+        position: absolute;
+        right: 0;
+        margin-right: 30px;
+    }
+    .form-block {
+        display: flex;
+        margin-top: -250px;
+        display: none;
+        position: relative;
+        background-color: #ffff;
+        width: 555px;
+    }
+    .form-inputs {
+        display: flex;
+        flex-direction: row;
+        margin-left: 30px;
+    }
+    .field-input, .message-field {
+        margin-top: 10px;
+        background-color: #eaeef1;
+        border: none;
+    }
+    .field-input {
+        margin-top: 10px;
+        width: 240px;
+        height: 45px;
+    }
+    .email {
+        margin-left: 15px;
+    }
+    .descri-ption-input {
+        margin-left: 5px;
+    }
+    .message {
+        margin-left: 30px;
+    }
+    .message-field {
+        margin-top: 10px;
+        width: 495px;
+        height: 160px;
+        resize: none;
+    }
+    .btn-send-message, .btn-show-form {
+        background-color: #a4aead;
+        border: none;
+    }
+    .btn-send-message {
+        color: white;
+        margin-left: 30px;
+        margin-top: 30px;
+        width: 150px;
+    }
+    .btn-show-form {
+        margin-bottom: 80px;
     }
 }
 
@@ -631,22 +826,21 @@ body {
         position: sticky;
         top: 0;
         background-color: #1d2126;
+        z-index: 15;
     }
     .logo {
         margin-top: 15px;
         text-align: center;
+        margin-bottom: 15px;
     }
-    .menu ul {
+    .menu {
         position: sticky;
         display: flex;
-        overflow-x: auto;
+        flex-direction: column;
         justify-content:space-between;
-        list-style: none;
+        align-items: center;
         margin-top: 10px;
         padding-bottom: 20px;
-    }
-    .menu ul::-webkit-scrollbar {
-        display: none;
     }
     .menu li {
         padding-top: 10px;
@@ -661,6 +855,66 @@ body {
     .menu a:hover {
         border: 1px solid #a4aead;
         border-radius: 5px;
+    }
+    .nav-mobile-menu {
+        width: 15px;
+        height: 15px;
+        position: relative;
+    }
+    .nav-mobile-menu span {
+        height: 1px;
+        background-color: white;
+        position: absolute;
+        left: 0;
+        right: 0;
+        transition: .25s ease-in-out;
+    }
+    .nav-mobile-menu span:nth-last-child(1) {
+        top: 3px;
+    }
+    .nav-mobile-menu span:nth-last-child(2) {
+        top: 7px;
+    }
+    .nav-mobile-menu span:nth-last-child(3) {
+        bottom: 3px;
+    }
+    .hidden-menu {
+        opacity: 0;
+        visibility: hidden;
+    }
+    .nav-mobile-menu.active-menu span:nth-last-child(1) {
+        top: 50%;
+        transform: rotate(45deg);
+    }
+    .nav-mobile-menu.active-menu span:nth-last-child(2) {
+        top: 50%;
+        transform: rotate(-45deg);
+    }
+    .nav-mobile-menu.active-menu span:nth-last-child(3) {
+        transform: scale(0);
+    }
+    .navigation {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 280px;
+        max-width: 280px;
+        transition: all 500ms ease-in-out;
+        transform: translateX(150%);
+    }
+    .navigation.active-menu {
+        opacity: 1;
+        visibility: visible;
+        transform: translateX(0);
+        top: 40px;
+        background-color: #1d2126;
+        
+    }
+    .header-row {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
     }
     /*section-1*/
 
@@ -985,9 +1239,9 @@ body {
         margin-left: 10px;
         margin-top: 60px;
     }
-    .contacts {
+    /*.contacts {
         margin-bottom: 130px;
-    }
+    }*/
     .footer {
         display: flex;
     }
@@ -1001,6 +1255,124 @@ body {
         width: 30px;
         height: 30px;
     }
+    /*FORM*/
+    .closed {
+        width: 30px;
+        height: 30px;
+        margin-top: 5px;
+        padding-top: 5px;
+        border-radius: 5px;
+        background-color: red;
+        color: #ffff;
+        right: 0;
+        position: absolute;
+        text-align: center;
+    }
+    .form-block {
+        /*margin-top: -400px;*/
+        display: flex;
+        display: none;
+        position: relative;
+        background-color: #ffff;
+    }
+    .form-inputs {
+        display: flex;
+        flex-direction: column;
+    }
+    .field-input, .message-field {
+        margin-top: 10px;
+        background-color: #eaeef1;
+        border: none;
+    }
+    .field-input {
+        width: 100%;
+        height: 45px;
+    }
+
+    .descri-ption-input {
+        margin-left: 5px;
+    }
+    .message {
+        align-items: center;
+    }
+    .message-field {
+        margin-top: 10px;
+        width: 100%;
+        height: 160px;
+        resize: none;
+    }
+    .btn-send-message, .btn-show-form {
+        background-color: #a4aead;
+        border: none;
+    }
+    .btn-send-message {
+        color: white;
+        margin-top: 30px;
+        width: 125px;
+    }
+    .btn-show-form {
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+}
+/*modal*/
+.modal {
+    position: fixed;
+    top: 10px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0, 0.5);
+    z-index: 100;
+    display: none;
+}
+.modal-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 200px;
+    margin: 80px auto;
+    height: 240px;
+    border: 2px solid gray;
+    background-color: #3a454d;
+    padding: 15px;
+}
+.form-fields {
+    margin: 10px 0;
+}
+.input-field,.field-input,.message-field:focus {outline: none;}
+.input-field {
+    height: 30px;
+    width: 100%;
+    padding: 5px;
+    border: 1px solid gray;
+}
+.close-btn {
+    margin-left: 150px;
+    text-align: center;
+    background-color: red;
+    color: #ffff;
+    border-radius: 5px;
+    height: 20px;
+    width: 20px;
+}
+.btn-modal {
+    margin-left: 20px;
+    margin-top: 5px;
+    height: 35px;
+}
+.modal-heading {
+    color: white;
+    font-size: 15px;
+    line-height: 1.5;
+    margin-top: 10px;
+    text-align: center;
+}
+.hide {
+    display: none;
+}
+.show {
+    display: block;
 }
 
 
